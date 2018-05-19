@@ -15,7 +15,7 @@ public class Main extends Application {
         startMenu = StartMenu.getScene();
 
         window.setScene(startMenu);
-        window.setTitle(StartMenu.getTitle());
+        window.setTitle(StartMenu.getTitle()); // this is a test comment testing out github on pranav's account
         window.setOnCloseRequest(e -> {
             e.consume();
             closeProgram();
@@ -37,4 +37,3 @@ public class Main extends Application {
         }
     }
 }
-// hello tis is parnav dsf
