@@ -31,9 +31,10 @@ public class StartMenu {
 
         VBox l1 = new VBox();
         l1.getChildren().addAll(title, casinoGames, howToPlay, aboutUs);
-        l1.setAlignment(Pos.TOP_CENTER);
+        l1.setAlignment(Pos.CENTER);
         l1.setMinSize(600, 600);
         l1.setMaxSize(1000,1000);
+        l1.setSpacing(20);
 
         return new Scene(l1, 600, 600);
     }
