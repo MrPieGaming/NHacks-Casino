@@ -1,5 +1,3 @@
-package Scenes;
-
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -19,7 +17,7 @@ public class StartMenu {
 
         howToPlay = new Button();
         howToPlay.setText("How to Play");
-        //howToPlay.setOnAction(e -> /*howToPlay Scene here*/);
+        howToPlay.setOnAction(e -> Main.getStage().setScene(HowToPlay.getScene()));
 
         casinoGames = new Button();
         casinoGames.setText("Casino Games");

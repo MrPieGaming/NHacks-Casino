@@ -1,21 +1,21 @@
 import Boxes.ConfirmBox;
-import Scenes.StartMenu;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
 
-    private Scene startMenu;
-    private Stage window;
+    private Scene startMenu, howToPlay;
+    private static Stage window;
 
     public void start(Stage primaryStage) throws Exception {
         window = primaryStage;
 
         startMenu = StartMenu.getScene();
+        howToPlay = HowToPlay.getScene();
 
         window.setScene(startMenu);
-        window.setTitle(StartMenu.getTitle());
+        window.setTitle(StartMenu.getTitle()); // this is a test comment testing out github on pranav's account
         window.setOnCloseRequest(e -> {
             e.consume();
             closeProgram();
@@ -35,5 +35,9 @@ public class Main extends Application {
             System.out.println("Closing application...");
             window.close();
         }
+    }
+
+    public static Stage getStage() {
+        return window;
     }
 }
