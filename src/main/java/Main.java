@@ -21,11 +21,6 @@ public class Main extends Application {
             closeProgram();
         });
         window.show();
-
-        // window.setScene();
-        // window.setTitle();
-        // window.setOnCloseRequest();
-        // window.show();
     }
 
     private void closeProgram() {
