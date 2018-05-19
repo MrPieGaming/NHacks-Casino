@@ -1,3 +1,4 @@
+import Boxes.ConfirmBox;
 import Scenes.StartMenu;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -10,11 +11,29 @@ public class Main extends Application {
 
     public void start(Stage primaryStage) throws Exception {
         window = primaryStage;
+
         startMenu = StartMenu.getScene();
+
+        window.setScene(startMenu);
+        window.setTitle(StartMenu.getTitle());
+        window.setOnCloseRequest(e -> {
+            e.consume();
+            closeProgram();
+        });
+        window.show();
 
         // window.setScene();
         // window.setTitle();
         // window.setOnCloseRequest();
         // window.show();
+    }
+
+    private void closeProgram() {
+        boolean answer = ConfirmBox.display("Exit Window", "Are you sure you want to exit?");
+
+        if (answer) {
+            System.out.println("Closing application...");
+            window.close();
+        }
     }
 }
